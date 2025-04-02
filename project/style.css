@@ -148,56 +148,60 @@ li {
 h2 {
   font-size: 24px;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 /* Skill Bars Container */
 .chart {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 40px; /* Spacing between bars */
   margin-top: 20px;
 }
 
-/* Individual Skill Bar (Vertical) */
+/* Outer Bar (Unfilled Section) */
+.bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .bar {
   position: relative;
-  width: 50px; /* Bar width */
-  height: 200px; /* Bar height */
-  background: #ddd;
+  width: 100px; /* Bar width */
+  height: 300px; /* Bar height */
   border-radius: 10px;
+  background-color: #ddd; /* Default background color (Unfilled part) */
   overflow: hidden;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column-reverse; /* Ensures filling starts from bottom */
+  align-items: center;
 }
 
-/* Progress inside the bar */
-.bar::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: calc(var(--percent) * 1%);
-  background-color: var(--color);
+/* Inner Bar (Filled Section) */
+.bar-fill {
+  width: 100%; /* Make sure it fills the entire width */
+  height: var(--percent); /* Dynamic height based on percentage */
+  background-color: var(--color); /* Dynamic color */
   transition: height 1s ease-in-out;
-}
-
-/* Skill Name (Below Bar) */
-.skill {
-  position: absolute;
-  bottom: -30px;
-  width: 100%;
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  color: #333;
 }
 
 /* Percentage Label (Inside Bar) */
 .label {
   position: absolute;
-  top: 5px;
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   color: #fff;
+}
+
+/* Skill Name (Now Below the Bar) */
+.skill {
+  margin-top: 10px; /* Spacing below the bar */
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
 }
