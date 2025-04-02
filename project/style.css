@@ -1,24 +1,25 @@
 /* General Styling */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fff;
+  background-color: #f8f9fa;
   color: #333;
   text-align: center;
 }
 
-/* Main container */
+/* Main Container */
 .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 50px auto;
   padding: 20px;
+  gap: 40px;
 }
 
-/* Text content */
+/* Text Content */
 .text-content {
   flex: 1;
   max-width: 50%;
@@ -29,28 +30,36 @@ h1 {
   font-weight: bold;
   margin: 0;
   text-transform: lowercase;
+  color: #3498db;
 }
 
 .location {
   font-size: 18px;
   margin: 10px 0;
+  font-weight: bold;
 }
 
 .description {
   font-size: 16px;
   line-height: 1.6;
+  color: #555;
 }
 
 /* Profile Image */
 .image-container {
   flex: 1;
-  text-align: right;
+  text-align: center;
 }
 
 .profile-image {
   max-width: 80%;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
 }
 
 /* Skills Section */
@@ -59,21 +68,24 @@ h1 {
   align-items: center;
   justify-content: space-between;
   max-width: 1000px;
+  width: 100%;
   margin: 50px auto;
   padding: 20px;
+  background: #34495e;
 }
 
 /* Text Sections */
 .text-section {
   flex: 1;
   text-align: center;
-  opacity: 1; /* Ensure it is visible */
-  transform: translateY(0); /* Remove transition issues */
+  opacity: 1;
+  transform: translateY(0);
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
+  color: #2c3e50;
 }
 
 ul {
@@ -84,6 +96,7 @@ ul {
 li {
   font-size: 16px;
   margin: 8px 0;
+  color: #444;
 }
 
 /* Pie Chart */
@@ -92,13 +105,11 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 1; /* Ensure visibility */
-  transform: scale(1); /* Ensure visibility */
 }
 
 .pie-chart {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   background: conic-gradient(
     lightgray 0deg 120deg,
@@ -110,6 +121,11 @@ li {
   justify-content: center;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
   position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.pie-chart:hover {
+  transform: scale(1.05);
 }
 
 /* Labels */
@@ -137,29 +153,15 @@ li {
   left: 50%;
   transform: translate(-50%, 50%);
 }
-/* // section2 */
-/* Skills Section */
-.Section2 {
-  text-align: center;
-  margin: 50px auto;
-  max-width: 800px;
-}
 
-h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-/* Skill Bars Container */
+/* Skills Bars */
 .chart {
   display: flex;
   justify-content: center;
-  gap: 40px; /* Spacing between bars */
+  gap: 40px;
   margin-top: 20px;
 }
 
-/* Outer Bar (Unfilled Section) */
 .bar-container {
   display: flex;
   flex-direction: column;
@@ -168,25 +170,28 @@ h2 {
 
 .bar {
   position: relative;
-  width: 100px; /* Bar width */
-  height: 300px; /* Bar height */
+  width: 100px;
+  height: 300px;
   border-radius: 10px;
-  background-color: #ddd; /* Default background color (Unfilled part) */
+  background-color: #ddd;
   overflow: hidden;
   display: flex;
-  flex-direction: column-reverse; /* Ensures filling starts from bottom */
+  flex-direction: column-reverse;
   align-items: center;
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Inner Bar (Filled Section) */
+.bar:hover {
+  transform: scale(1.05);
+}
+
 .bar-fill {
-  width: 100%; /* Make sure it fills the entire width */
-  height: var(--percent); /* Dynamic height based on percentage */
-  background-color: var(--color); /* Dynamic color */
+  width: 100%;
+  height: var(--percent);
+  background-color: var(--color);
   transition: height 1s ease-in-out;
 }
 
-/* Percentage Label (Inside Bar) */
 .label {
   position: absolute;
   top: 10px;
@@ -197,11 +202,148 @@ h2 {
   color: #fff;
 }
 
-/* Skill Name (Now Below the Bar) */
+/* Skill Name */
 .skill {
-  margin-top: 10px; /* Spacing below the bar */
+  margin-top: 10px;
   font-size: 16px;
   font-weight: bold;
   color: #333;
   text-align: center;
+}
+
+/* Education Section */
+.education {
+  margin: 50px 0;
+  padding: 20px;
+  background-color: #eef2f3;
+}
+
+.education h2 {
+  font-size: 28px;
+  color: #34495e;
+}
+
+.education-item {
+  margin: 20px 0;
+}
+
+.education-item h3 {
+  color: #2c3e50;
+}
+
+/* CV Download */
+.cv-section {
+  margin: 40px 0;
+}
+
+.download-btn {
+  padding: 12px 25px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+}
+
+.download-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Interests */
+.interests {
+  margin: 40px 0;
+}
+
+.interests ul {
+  list-style: none;
+  padding: 0;
+}
+
+.interests li {
+  background: #ecf0f1;
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+/* Projects */
+.projects {
+  margin: 40px 0;
+  padding: 20px;
+  background: #f8f9fa;
+}
+
+.project-item {
+  margin: 20px 0;
+}
+
+.project-item a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-item a:hover {
+  text-decoration: underline;
+  color: #2980b9;
+}
+
+/* Contact Section */
+.contact {
+  margin: 40px 0;
+  padding: 20px;
+  background: #34495e;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.contact h2 {
+  color: #fff;
+}
+
+.contact p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.contact a {
+  color: #f39c12;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+  color: #e67e22;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-content {
+    max-width: 100%;
+  }
+
+  .image-container {
+    text-align: center;
+  }
+
+  .section {
+    flex-direction: column;
+  }
+
+  .chart {
+    flex-direction: column;
+  }
+
+  .bar {
+    height: 250px;
+    width: 80px;
+  }
 }
