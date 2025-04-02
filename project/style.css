@@ -5,6 +5,7 @@ body {
   padding: 0;
   background-color: #fff;
   color: #333;
+  text-align: center;
 }
 
 /* Main container */
@@ -52,31 +53,7 @@ h1 {
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Gallery */
-.gallery {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 40px;
-  padding: 10px;
-}
-
-.gallery img {
-  width: 100px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.gallery img:hover {
-  transform: scale(1.1);
-}
-/* // section2 */
-/* General Styling */
-
-/* Skills*/
+/* Skills Section */
 .section {
   display: flex;
   align-items: center;
@@ -90,9 +67,8 @@ h1 {
 .text-section {
   flex: 1;
   text-align: center;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  opacity: 1; /* Ensure it is visible */
+  transform: translateY(0); /* Remove transition issues */
 }
 
 h2 {
@@ -116,9 +92,8 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  transform: scale(0.5);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  opacity: 1; /* Ensure visibility */
+  transform: scale(1); /* Ensure visibility */
 }
 
 .pie-chart {
@@ -128,7 +103,7 @@ li {
   background: conic-gradient(
     lightgray 0deg 120deg,
     black 120deg 240deg,
-    blue 240deg 360deg
+    rgb(4, 121, 110) 240deg 360deg
   );
   display: flex;
   align-items: center;
@@ -162,10 +137,67 @@ li {
   left: 50%;
   transform: translate(-50%, 50%);
 }
+/* // section2 */
+/* Skills Section */
+.Section2 {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 800px;
+}
 
-/* Reveal Animation */
-.text-section.show,
-.chart-container.show {
-  opacity: 1;
-  transform: translateY(0);
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Skill Bars Container */
+.chart {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Individual Skill Bar (Vertical) */
+.bar {
+  position: relative;
+  width: 50px; /* Bar width */
+  height: 200px; /* Bar height */
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Progress inside the bar */
+.bar::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: calc(var(--percent) * 1%);
+  background-color: var(--color);
+  transition: height 1s ease-in-out;
+}
+
+/* Skill Name (Below Bar) */
+.skill {
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Percentage Label (Inside Bar) */
+.label {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
 }
