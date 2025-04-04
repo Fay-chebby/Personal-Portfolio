@@ -4,8 +4,48 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f8f9fa;
-  color: #333;
+  color: #000000;
   text-align: center;
+}
+/* Navbar Styles */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f39c12;
+}
+
+section {
+  padding-top: 80px;
 }
 
 /* Main Container */
@@ -29,7 +69,6 @@ h1 {
   font-size: 60px;
   font-weight: bold;
   margin: 0;
-  text-transform: lowercase;
   color: #3498db;
 }
 
@@ -42,7 +81,7 @@ h1 {
 .description {
   font-size: 16px;
   line-height: 1.6;
-  color: #555;
+  color: #000000;
 }
 
 /* Profile Image */
@@ -71,27 +110,34 @@ h1 {
 }
 
 /* SKILLS SECTION */
-.skills-section {
-  background-color: #e3e6e8;
+.skill {
+  background-color: #eef2f3;
   padding: 50px 20px;
   margin: 50px 0;
   border-radius: 5px;
 }
 
 .skills-section h2 {
-  color: #34495e;
+  color: #3498db;
 }
 
 /* Technical Skills Section */
+.skills-sections {
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+  margin: 50px 0;
+  border-radius: 5px;
+}
+
 .Section2 {
-  background-color: #dce1e3;
+  /* background-color: #dce1e3; */
   padding: 50px 20px;
   margin: 50px 0;
   border-radius: 5px;
 }
 
 .Section2 h2 {
-  color: #2c3e50;
+  color: #3498db;
 }
 
 /* Skills Section Layout */
@@ -116,7 +162,7 @@ h1 {
 h2 {
   font-size: 28px;
   font-weight: bold;
-  color: #2c3e50;
+  color: #3498db;
 }
 
 ul {
@@ -127,7 +173,7 @@ ul {
 li {
   font-size: 16px;
   margin: 8px 0;
-  color: #444;
+  color: #000000;
 }
 
 /* Pie Chart */
@@ -142,11 +188,7 @@ li {
   width: 220px;
   height: 220px;
   border-radius: 50%;
-  background: conic-gradient(
-    lightgray 0deg 120deg,
-    black 120deg 240deg,
-    rgb(4, 121, 110) 240deg 360deg
-  );
+  background: conic-gradient(#f39c12, black 120deg 240deg, #3498db);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -236,7 +278,7 @@ li {
   margin-top: 10px;
   font-size: 16px;
   font-weight: bold;
-  color: #333;
+  color: #000000;
   text-align: center;
 }
 
@@ -250,7 +292,7 @@ li {
 
 .education h2 {
   font-size: 28px;
-  color: #34495e;
+  color: #3498db;
 }
 
 .education-item {
@@ -258,17 +300,17 @@ li {
 }
 
 .education-item h3 {
-  color: #2c3e50;
+  color: #f39c12;
 }
 
 /* CV Download */
 .cv-section {
-  margin: 40px 0;
+  margin: 10px 0;
 }
 
 .download-btn {
   padding: 12px 25px;
-  background-color: #3498db;
+  background-color: #f39c12;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -277,15 +319,15 @@ li {
 }
 
 .download-btn:hover {
-  background-color: #2980b9;
+  background-color: #3498db;
 }
 
 /* CONTACT SECTION */
 .contact {
   margin: 40px 0;
   padding: 20px;
-  background: #34495e;
-  color: #fff;
+  background: #eef2f3;
+  color: #000000;
   border-radius: 5px;
 }
 
@@ -303,7 +345,9 @@ li {
   text-decoration: none;
   font-weight: bold;
 }
-
+.phone {
+  color: #f39c12;
+}
 .contact a:hover {
   text-decoration: underline;
   color: #e67e22;
@@ -428,4 +472,23 @@ li {
   .project-item-container .project-item {
     width: 100%; /* Stack cards on smaller screens */
   }
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 50px;
+}
+
+footer a {
+  color: #f39c12;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
