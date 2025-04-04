@@ -320,12 +320,12 @@ li {
   /* margin: 10px 0; */
 }
 .education p {
-  text-align: justify;
-  align-items: center;
-  margin-left: 600px;
+  /* text-align: justify; */
+  /* align-items: center; */
+  /* margin-left: 600px; */
 }
 .Higher {
-  margin-left: 900px;
+  /* margin-left: 900px; */
 }
 .download-btn {
   padding: 12px 25px;
@@ -503,7 +503,7 @@ footer {
   text-align: center;
   padding: 15px 0;
   margin-top: 50px;
-  position:sticky;
+  position: fixed;
 }
 
 footer a {
@@ -514,4 +514,83 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 575px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  .container,
+  .section,
+  .chart {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .bar {
+    height: 200px;
+    width: 60px;
+  }
+
+  .project-item {
+    width: 90%;
+  }
+
+  .education p,
+  .Higher {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+/* Tablets (576px - 768px) */
+@media (min-width: 576px) and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .project-item {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 44px;
+  }
+  .education-item p {
+    margin: 0 px;
+  }
+}
+
+/* Medium Devices (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container,
+  .section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 52px;
+  }
+
+  .project-item {
+    width: 45%;
+  }
+}
+
+/* Large Devices (1025px and up) */
+@media (min-width: 1025px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .project-item {
+    width: 300px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
 }
